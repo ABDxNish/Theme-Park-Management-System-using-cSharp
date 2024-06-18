@@ -1,0 +1,432 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15B3B92A-4B25-4AC0-95CB-2349B0051FD1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBCon.cs" />
+    <Compile Include="LoalingPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoalingPage.Designer.cs">
+      <DependentUpon>LoalingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Signup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Signup.Designer.cs">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel.Designer.cs">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerDetails.Designer.cs">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobApply.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobApply.Designer.cs">
+      <DependentUpon>JobApply.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobSeekerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobSeekerView.Designer.cs">
+      <DependentUpon>JobSeekerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobSubmitThanks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobSubmitThanks.Designer.cs">
+      <DependentUpon>JobSubmitThanks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RideOperatorRideView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RideOperatorRideView.Designer.cs">
+      <DependentUpon>RideOperatorRideView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RideOperatorFoodView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RideOperatorFoodView.Designer.cs">
+      <DependentUpon>RideOperatorFoodView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RideOperatorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RideOperatorView.Designer.cs">
+      <DependentUpon>RideOperatorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThanksPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThanksPage.Designer.cs">
+      <DependentUpon>ThanksPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketSellerView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketSellerView.Designer.cs">
+      <DependentUpon>TicketSellerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanelOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanelOne.Designer.cs">
+      <DependentUpon>UserPanelOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanelPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanelPass.Designer.cs">
+      <DependentUpon>UserPanelPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanelPremium.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanelPremium.Designer.cs">
+      <DependentUpon>UserPanelPremium.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanelRegular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserPanelRegular.Designer.cs">
+      <DependentUpon>UserPanelRegular.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewPremiumTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewPremiumTicket.Designer.cs">
+      <DependentUpon>ViewPremiumTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRideOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRideOperator.Designer.cs">
+      <DependentUpon>ViewRideOperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTicketHistoryOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTicketHistoryOne.Designer.cs">
+      <DependentUpon>ViewTicketHistoryOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTicketOne.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTicketOne.Designer.cs">
+      <DependentUpon>ViewTicketOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTicketSeller.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTicketSeller.Designer.cs">
+      <DependentUpon>ViewTicketSeller.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LoalingPage.resx">
+      <DependentUpon>LoalingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Signup.resx">
+      <DependentUpon>Signup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel.resx">
+      <DependentUpon>AdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerDetails.resx">
+      <DependentUpon>CustomerDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobApply.resx">
+      <DependentUpon>JobApply.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobSeekerView.resx">
+      <DependentUpon>JobSeekerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobSubmitThanks.resx">
+      <DependentUpon>JobSubmitThanks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RideOperatorRideView.resx">
+      <DependentUpon>RideOperatorRideView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RideOperatorFoodView.resx">
+      <DependentUpon>RideOperatorFoodView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RideOperatorView.resx">
+      <DependentUpon>RideOperatorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThanksPage.resx">
+      <DependentUpon>ThanksPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketSellerView.resx">
+      <DependentUpon>TicketSellerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanelOne.resx">
+      <DependentUpon>UserPanelOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanelPass.resx">
+      <DependentUpon>UserPanelPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanelPremium.resx">
+      <DependentUpon>UserPanelPremium.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanelRegular.resx">
+      <DependentUpon>UserPanelRegular.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewPremiumTicket.resx">
+      <DependentUpon>ViewPremiumTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRideOperator.resx">
+      <DependentUpon>ViewRideOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTicketHistoryOne.resx">
+      <DependentUpon>ViewTicketHistoryOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTicketOne.resx">
+      <DependentUpon>ViewTicketOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTicketSeller.resx">
+      <DependentUpon>ViewTicketSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\201474.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amusement2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\F27LS.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-solid-color-matte-background-blue-gradient-wind-background-color-mattesolid-backgroundblue-image_84871.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_309780437_bztYRNRTMDZYw3tYMSvxY3taQcE7mJqE.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-login-button-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_460710131_YkD6NsivdyYsHupNvO3Y8MPEwxTAhORh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6057485.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\geometric-gradient-futuristic-background_23-2149116406.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_355607062_zYMS8jaz4SfoykpWz5oViRVKL32IabTP.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c02f68274d259568eb3545db613e53d9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f114184812f4ae767f42e6bcad6c06f2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1203011577-2048x2048.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_105726195_r0MpL0Noxp2NeMh3RsRwCskbeL7ensjV.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lego-2539844_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lego-2539844_12801.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WomanAtLaptop.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_562625306_WBMdkxhI72fzuluf3XNWgcKZcqljslaR-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy-space-glasses-desk_23-2148519734.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy-space-glasses-desk_23-21485197341.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red-and-white-business-background-blank-modern-background-with-hexagonal-pattern-design-eps-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\National_Park_Logo_Design-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\National_Park_Logo_Design-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KUL_4097-scaled.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Woman_riding_mechanical_bull.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luna_Park_Melbourne_scenic_railway.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jambore.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BumperCar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\french-fries-icon-isolated-illustration-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pizza-logo-vector-PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\burger-logo-for-fast-food-business-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Momo_nepal.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %284%29.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blurry-background-vi-wallpaper-preview.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Good-food-logo-design-on-transparent-background-PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Good-food-logo-design-on-transparent-background-PNG-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Good-food-logo-design-on-transparent-background-PNG-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images__5_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Good-food-logo-design-on-transparent-background-PNG-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transparent-web-button-compilation-icon-logout-icon-5dcfda74a429e8.6038584015739029646724-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\family-cover.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-premium-badge-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultProfileImage.bmp" />
+    <None Include="Resources\DefaultProfileImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eye.512x512.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
